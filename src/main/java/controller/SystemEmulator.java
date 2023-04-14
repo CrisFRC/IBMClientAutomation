@@ -2,7 +2,7 @@ package controller;
 
 import com.jacob.activeX.ActiveXComponent;
 
-public class SystemIbmAccessClient {
+public class SystemEmulator {
     private static ActiveXComponent ibmSystem5250;
 
     public static void putSystemIbmAccessClient(){
