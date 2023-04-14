@@ -2,11 +2,25 @@ package controller;
 
 import com.jacob.com.Dispatch;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class ScreenEmulator {
 
-    public static Dispatch screen(){
+    static Logger logger = Logger.getLogger(ScreenEmulator.class.getName());
 
-        return SystemEmulator.getIbmSystem5250().getPropertyAsComponent("ActiveSession").getProperty("Screen").toDispatch();
+    private ScreenEmulator(){
+
+    }
+
+    public static Dispatch screen(){
+        try{
+            return SystemEmulator.getIbmSystem5250().getPropertyAsComponent("ActiveSession").getProperty("Screen").toDispatch();
+        }catch (Exception e){
+            logger.log(Level.SEVERE,()->"ERROR SCREEN NOT EXEC");
+            return null;
+        }
+
     }
 
 }
