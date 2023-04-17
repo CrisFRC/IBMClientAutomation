@@ -14,11 +14,6 @@ public class LoginTest {
         String user = "CCFROA";
         String pass = "cfroa0626";
         OpenEmulator.openTerminalEmulator("src/main/resources/sessions/CALIDAD.EDP");
-
-        //object key definition
-
-
-
         //object user definition
         Target userTarget = Target.the("user")
                 .locatedByCoordinate(Coordinate.withRow(6)
@@ -30,7 +25,6 @@ public class LoginTest {
                 .locatedByCoordinate(Coordinate.withRow(7)
                         .withInitialColumn(53).andLength(pass.length()));
         EnterValueI passValue = new EnterValueI(pass, passTarget);
-
         //enter objects
         userValue.enterValue();
         passValue.enterValue();
