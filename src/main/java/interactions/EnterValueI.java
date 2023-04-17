@@ -24,7 +24,7 @@ public class EnterValueI {
         return this.target.getTag().isEmpty() ? this.coordinate.getInitialColumn() : this.coordinate.getFinalColumn();
     }
 
-    public void enterValue(){
+    public  void enterValue(){
         PutString.putString(this.text, this.coordinate.getRow(), this.getColumn());
     }
 
