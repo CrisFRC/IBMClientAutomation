@@ -1,8 +1,8 @@
 package utils;
 
-public class StateOfMyExtraSession {
+public class StateOfEmulatorSession {
     private static boolean stateEmulator;
-    private StateOfMyExtraSession(){
+    private StateOfEmulatorSession(){
         throw new IllegalStateException("Utility class");
     }
 
@@ -11,6 +11,6 @@ public class StateOfMyExtraSession {
     }
 
     public static void setStateEmulator(boolean stateEmulator) {
-        StateOfMyExtraSession.stateEmulator = stateEmulator;
+        StateOfEmulatorSession.stateEmulator = stateEmulator;
     }
 }

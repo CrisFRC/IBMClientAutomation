@@ -2,7 +2,7 @@ package tasks;
 
 import com.jacob.com.Dispatch;
 import controller.SystemEmulator;
-import utils.StateOfMyExtraSession;
+import utils.StateOfEmulatorSession;
 import waits.WaitForConnection;
 
 public class OpenEmulator {
@@ -13,7 +13,7 @@ public class OpenEmulator {
         Dispatch sessionActive = Dispatch.call(session,"Open", pathSessionFile).toDispatch();
         Dispatch.put(sessionActive,"Visible",true);
         WaitForConnection.waitForConnection();
-        StateOfMyExtraSession.setStateEmulator(true);
+        StateOfEmulatorSession.setStateEmulator(true);
 
 
 
