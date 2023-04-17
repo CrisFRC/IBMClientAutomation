@@ -9,14 +9,12 @@ import java.util.logging.Logger;
 
 public class SendKeys {
 
-    private String key;
-    private Logger logger = Logger.getLogger(SendKeys.class.getName());
+    private static String key;
+    private static Logger logger = Logger.getLogger(SendKeys.class.getName());
 
-    public SendKeys(String key){
-        this.key = key;
-    }
 
-    public void sendKeys(){
+
+    public static void sendKeys(String key){
         try {
             Dispatch.call(ScreenEmulator.screen(), "SendKeys", key);
             WaitForSystem.waitForTheSystem();

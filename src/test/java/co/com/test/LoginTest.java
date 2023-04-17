@@ -1,6 +1,7 @@
 package co.com.test;
 
 import interactions.EnterValueI;
+import interactions.SendKeys;
 import org.junit.Test;
 import targets.Coordinate;
 import targets.Target;
@@ -13,6 +14,10 @@ public class LoginTest {
         String user = "CCFROA";
         String pass = "cfroa0626";
         OpenEmulator.openTerminalEmulator("src/main/resources/sessions/CALIDAD.EDP");
+
+        //object key definition
+
+
 
         //object user definition
         Target userTarget = Target.the("user")
@@ -29,6 +34,7 @@ public class LoginTest {
         //enter objects
         userValue.enterValue();
         passValue.enterValue();
+        SendKeys.sendKeys("ENTER");
     }
 
 }
