@@ -14,10 +14,6 @@ public class OpenEmulator {
         Dispatch.put(sessionActive,"Visible",true);
         WaitForConnection.waitForConnection();
         StateOfEmulatorSession.setStateEmulator(true);
-
-
-
-
     }
 
 }
